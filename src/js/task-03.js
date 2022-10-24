@@ -12,3 +12,43 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector('.gallery');
+
+const image = images.map(elem => {
+  const url = elem.url
+  const alt = elem.alt
+
+  return '<li class = "gallery-item"><img src="${url}" alt="${alt}" width = "250px"></li>'
+});
+
+console.log(image);
+listEl.insertAdjacentHTML("afterbegin", image.join(""));
+
+
+// const markup = newTechnologies
+//   .map((technology) => `<li class="list-item new">${technology}</li>`)
+//   .join("");
+
+// const arr = [];
+
+// for (let i = 0; i < images.length; i += 1) {
+//   const  = document.createElement("li");
+//   const newImg = document.createElement("img");
+//   newImg.classList.add("size");
+//   newImg.snewItemetAttribute("src", images[i].url);
+//   newImg.setAttribute("alt", images[i].alt);   
+//   newItem.append(newImg);
+//   console.log(newItem);
+//   arr.push(newItem);
+// }
+
+// gallery.append(...arr);
+
+// for (let i = 0; i < images.length; i += 1) {
+//   const newItem = '<li><img class="size" src="${images[i].url}" alt="${images[i].alt}" width = "250px"></li>';
+//   console.log(newItem);
+//   arr.push(newItem);
+// }
+// console.log(arr);
+// gallery.insertAdjacentHTML("beforeend", arr.join(""));
