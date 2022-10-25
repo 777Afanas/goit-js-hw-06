@@ -52,3 +52,7 @@ listEl.insertAdjacentHTML("afterbegin", image.join(""));
 // }
 // console.log(arr);
 // gallery.insertAdjacentHTML("beforeend", arr.join(""));
+
+
+// console.log(arr);
+// gallery.insertAdjacentHTML("beforeend", arr.join(""));
