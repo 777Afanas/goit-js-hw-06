@@ -9,15 +9,21 @@ form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
-    const {
-        elements: { email, password }
-    } = event.currentTarget;
+    // const {
+    //     elements: { email, password }
+    // } = event.currentTarget;
     
     if (email.value === "" || password.value === "") {
         alert('Все поля должны быть заполнены');
         // return console.log('Все поля должны быть заполнены');
+    } else {
+        const {
+        elements: { email, password }
+    } = event.currentTarget;
     }
 
-    console.log(`email: ${email.value}, Password: ${password.value}`);
+    // console.log(`email: ${email.value}, Password: ${password.value}`);
+    console.log(event.currentTarget);
+    
     event.currentTarget.reset();
 }
